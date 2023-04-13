@@ -7,10 +7,11 @@ export default function SearchedInput() {
   // the uses css styles from "recipe-card.scss"
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   let params = useParams();
+  let search = Object.values(params);
 
   const getSearchedRecipes = async (name) => {
     const api = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_RECIPE_API}&query=${name}, `
+      `https://api.spoonacular.com/recipes/complexSearch?number=12&apiKey=${process.env.REACT_APP_RECIPE_API}&query=${name}, `
     );
     const recipe = await api.json();
     setSearchedRecipes(recipe.results);
@@ -23,22 +24,28 @@ export default function SearchedInput() {
   return (
     <div>
       <div>
-        <p className="recipe-header">Recipes</p>
+        <p className="recipe-header">{search} recipes</p>
       </div>
       <div className="recipes-container">
-        {searchedRecipes.map((recipe) => {
-          return (
-            <div className="recipe-card" key={recipe.id}>
-              <RecipeCardImage imgSrc={recipe.image} pt="65%" />
-              <p className="recipe-title">{recipe.title}</p>
-              <Link className="view-recipe-btn" to={"/viewRecipe/" + recipe.id}>
-                VIEW RECIPE
-              </Link>
-            </div>
-          );
-        })}
+        {searchedRecipes.length === 0 ? (
+          <h2>There are no recipes for {search}</h2>
+        ) : (
+          searchedRecipes.map((recipe) => {
+            return (
+              <div className="recipe-card" key={recipe.id}>
+                <RecipeCardImage imgSrc={recipe.image} pt="65%" />
+                <p className="recipe-title">{recipe.title}</p>
+                <Link
+                  className="view-recipe-btn"
+                  to={"/viewRecipe/" + recipe.id}
+                >
+                  VIEW RECIPE
+                </Link>
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );
 }
-

@@ -45,7 +45,7 @@ export default function Navbar() {
           }
         </div>
         <div
-          onClick={() => setShowSidebar(true)}
+          onClick={() => setShowSidebar(!showSidebar)}
           className={showSidebar ? "sidebar-btn active" : "sidebar-btn"}
         >
           <div className="bar"></div>

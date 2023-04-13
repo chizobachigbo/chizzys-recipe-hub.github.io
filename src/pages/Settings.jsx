@@ -3,8 +3,9 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
 export default function Settings() {
+
   function verifySetting() {
-    const basicSetting = {
+    const defaultSetting = {
       "--background-color": "rgb(255, 255, 255)",
       "--background-light": "rgb(255, 255, 255)",
       "--shadow-color": "rgba(0, 0, 0, 0.2)",
@@ -16,19 +17,19 @@ export default function Settings() {
     };
     const previousSetting = JSON.parse(localStorage.getItem("settings"));
     if (previousSetting === null) {
-      return basicSetting;
+      return defaultSetting;
     } else {
       return previousSetting;
     }
   }
 
   function verifyState(setting, storage) {
-    const basic = setting;
-    const previous = JSON.parse(localStorage.getItem(storage));
-    if (previous === null) {
-      return basic;
+    const defaultState = setting;
+    const previousState = JSON.parse(localStorage.getItem(storage));
+    if (previousState === null) {
+      return defaultState;
     } else {
-      return previous;
+      return previousState;
     }
   } 
 
@@ -147,6 +148,7 @@ export default function Settings() {
     setAnimationSpeed(i);
     setSettings(_settings);
   }
+
   return (
     <div>
       <div className="section d-block">
