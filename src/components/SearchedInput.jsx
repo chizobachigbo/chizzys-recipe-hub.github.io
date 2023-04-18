@@ -37,7 +37,7 @@ export default function SearchedInput() {
                 <p className="recipe-title">{recipe.title}</p>
                 <Link
                   className="view-recipe-btn"
-                  to={"/viewRecipe/" + recipe.id}
+                  to={"/recipes/viewRecipe/" + recipe.id}
                 >
                   VIEW RECIPE
                 </Link>

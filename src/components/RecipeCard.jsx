@@ -28,7 +28,7 @@ export default function RecipeCard() {
             <div className="recipe-card" key={recipe.id}>
               <RecipeCardImage imgSrc={recipe.image} pt="65%" />
                 <p className="recipe-title">{recipe.title}</p>
-                <Link className="view-recipe-btn" to={"/viewRecipe/" + recipe.id}>VIEW RECIPE</Link>
+                <Link className="view-recipe-btn" to={"/recipes/viewRecipe/" + recipe.id}>VIEW RECIPE</Link>
             </div>
           );
         })}

@@ -10,7 +10,7 @@ export default function SearchBar() {
   const navigate = useNavigate(); 
 
   const submitSearch = () => {
-    navigate("/searched/" + input)
+    navigate("/recipes/searched/" + input)
   }
 
   const keyDownHandler = (e) => {
