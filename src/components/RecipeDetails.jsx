@@ -13,7 +13,6 @@ export default function RecipeDetails() {
       `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_RECIPE_API}`
     );
     const recipe = await api.json();
-    // console.log(recipe);
     setDetails(recipe);
   };
 

@@ -20,11 +20,26 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 body {
   font-size: var(--font-size);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   background-color: var(--background-light);
+  min-height: 100%;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 p {
@@ -41,7 +56,6 @@ a {
 img {
   object-fit: cover;
 }
-
 
 .btn {
   border: none;
@@ -95,7 +109,7 @@ img {
   margin-top: 1em;
   display: flex;
   gap: 1em;
-  .option{
+  .option {
     height: 3.5em;
     width: 3.5em;
     box-shadow: 0 3px 0px var(--shadow-color);
@@ -103,28 +117,29 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    &.light{
+    &.light {
       background-color: white;
     }
-    &.dark{
+    &.dark {
       background-color: black;
     }
-    .check{
+    .check {
       height: 2.5em;
       width: 2.5em;
       background-color: var(--primary-color);
+      color: #fff;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       box-shadow: 0 2px 5px var(--shadow-color);
-      svg{
+      svg {
         height: 1.5em;
         width: 1.5em;
       }
     }
   }
-  .btn span{
+  .btn span {
     display: inline-block;
     margin-left: 0.5em;
   }
@@ -132,7 +147,7 @@ img {
 
 .d-block h2 {
   font-size: 1.75em;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 .main {
@@ -154,7 +169,6 @@ img {
 @import "partials/animation.scss";
 @import "partials/view-recipe.scss";
 @import "partials/recipe-card-image.scss";
-
 
 @media screen and (max-width: 1280px) {
   .container {

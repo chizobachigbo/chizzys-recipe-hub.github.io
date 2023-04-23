@@ -52,6 +52,7 @@
   }
 
   .sidebar-btn {
+    display: none;
     height: 30px;
     width: 35px;
     position: relative;
@@ -59,7 +60,7 @@
       border-radius: 5px;
       height: 6px;
       width: 100%;
-      background-color: var(--text-color);
+      background-color: var(--primary-color);
       position: absolute;
       transition: getAnimationDuration(0.5s) ease-in-out;
       &:nth-child(1) {
