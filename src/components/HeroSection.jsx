@@ -4,15 +4,15 @@ import CustomImage from "./CustomImage";
 
 export default function HeroSection() {
   const images = [
-    "/img/gallery/img1.jpg",
-    "/img/gallery/img2.jpg",
-    "/img/gallery/img3.jpg",
-    "/img/gallery/img4.jpg",
-    "/img/gallery/img5.jpg",
-    "/img/gallery/img6.jpg",
-    "/img/gallery/img7.jpg",
-    "/img/gallery/img8.jpg",
-    "/img/gallery/img9.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img1.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img2.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img3.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img4.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img5.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img6.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img7.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img8.jpg",
+    "https://chizobachigbo.github.io/recipe-hub/img/gallery/img9.jpg",
   ];
   return (
     <div className="section hero">
