@@ -47,14 +47,12 @@ function App() {
       <Router>
         <Navbar />
         <div className="container main">
-          <Routes>
+          <Routes basename="/recipe-hub">
             <Route path="/" element={<Home/>}></Route>
             <Route path="/recipes" element={<Recipe/>}></Route>
             <Route path="/settings" element={<Settings/>}></Route>
             <Route path="/recipes/viewRecipe/:name" element={<ViewRecipe/>}></Route>
             <Route path="/recipes/searched/:search" element={<Searched/>}></Route>
-            {/* <Route path="/viewRecipe/:name" element={<ViewRecipe/>}></Route> */}
-            {/* <Route path="/searched/:search" element={<Searched/>}></Route> */}
           </Routes>
         </div>
         <Footer />

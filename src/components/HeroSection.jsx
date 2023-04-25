@@ -13,6 +13,7 @@ export default function HeroSection() {
     "/img/gallery/img7.jpg",
     "/img/gallery/img8.jpg",
     "/img/gallery/img9.jpg",
+    "/img/gallery/todo-01.jpg",
   ];
   return (
     <div className="section hero">
