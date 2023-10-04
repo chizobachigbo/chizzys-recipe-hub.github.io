@@ -150,7 +150,7 @@ export default function Settings() {
   }
 
   return (
-    <div>
+    <div className="settings">
       <div className="section d-block">
         <h2>Theme</h2>
         <div className="options-container">

@@ -160,6 +160,12 @@ img {
   max-width: 100%;
 }
 
+.settings{
+  .btn{
+    font-size: clamp(0.7rem, 2.5vw, 1rem);
+  }
+}
+
 @import "partials/navbar.scss";
 @import "partials/hero-section.scss";
 @import "partials/custom-image.scss";
@@ -169,6 +175,7 @@ img {
 @import "partials/animation.scss";
 @import "partials/view-recipe.scss";
 @import "partials/recipe-card-image.scss";
+
 
 @media screen and (max-width: 1280px) {
   .container {
