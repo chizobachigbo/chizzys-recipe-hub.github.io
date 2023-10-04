@@ -11,7 +11,7 @@ export default function Navbar() {
   const links = [
     {
       name: "Home",
-      path: "recipe-hub/",
+      path: "/",
       icon: faHome,
     },
     {

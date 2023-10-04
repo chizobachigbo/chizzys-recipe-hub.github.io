@@ -47,8 +47,8 @@ function App() {
       <Router>
         <Navbar />
         <div className="container main">
-          <Routes basename="recipe-hub/">
-            <Route exact path="recipe-hub/" element={<Home/>}></Route>
+          <Routes>
+            <Route path="/" element={<Home/>}></Route>
             <Route path="/recipes" element={<Recipe/>}></Route>
             <Route path="/settings" element={<Settings/>}></Route>
             <Route path="/recipes/viewRecipe/:name" element={<ViewRecipe/>}></Route>
