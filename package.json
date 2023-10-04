@@ -1,6 +1,5 @@
 {
-  "name": "recipe-app",
-  "homepage": "https://chizobachigbo.github.io/recipe-hub/",
+  "name": "recipe-hub",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
